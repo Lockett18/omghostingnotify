@@ -21,8 +21,8 @@
 	// Discord Group ID Config Option. If you wished for each message which is sent to ping a specific group, please place the ID here. An example of a group ID is: @&343029528563548162 
 
 	add_hook('InvoicePaid', 1, function($vars)	{
-		$whmcsAdminURL  = ""; // Your WHMCS Admin URL.
-		$companyName    = ""; // Your Company Name.
+		$whmcsAdminURL  = "https://client.omghosting.net/dostafflogin/"; // Your WHMCS Admin URL.
+		$companyName    = "OMG Hosting"; // Your Company Name.
 		$discordGroupID = ""; // Discord Group ID Config Option.
 		$dataPacket     = array(
 			'content' => $discordGroupID,
@@ -42,8 +42,8 @@
 		processNotification($dataPacket);
 	});
 	add_hook('InvoiceRefunded', 1, function($vars)	{
-		$whmcsAdminURL  = ""; // Your WHMCS Admin URL.
-		$companyName    = ""; // Your Company Name.
+		$whmcsAdminURL  = "https://client.omghosting.net/dostafflogin/"; // Your WHMCS Admin URL.
+		$companyName    = "OMG Hosting"; // Your Company Name.
 		$discordGroupID = ""; // Discord Group ID Config Option.
 		$dataPacket     = array(
 			'content' => $discordGroupID,
@@ -63,8 +63,8 @@
 		processNotification($dataPacket);
 	});
 	add_hook('AcceptOrder', 1, function($vars)	{
-		$whmcsAdminURL  = ""; // Your WHMCS Admin URL.
-		$companyName    = ""; // Your Company Name.
+		$whmcsAdminURL  = "https://client.omghosting.net/dostafflogin/"; // Your WHMCS Admin URL.
+		$companyName    = "OMG Hosting"; // Your Company Name.
 		$discordGroupID = ""; // Discord Group ID Config Option.
 		$dataPacket     = array(
 			'content' => $discordGroupID,
@@ -84,8 +84,8 @@
 		processNotification($dataPacket);
 	});
 	add_hook('CancellationRequest', 1, function($vars)	{
-		$whmcsAdminURL  = ""; // Your WHMCS Admin URL.
-		$companyName    = ""; // Your Company Name.
+		$whmcsAdminURL  = "https://client.omghosting.net/dostafflogin/"; // Your WHMCS Admin URL.
+		$companyName    = "OMG Hosting"; // Your Company Name.
 		$discordGroupID = ""; // Discord Group ID Config Option.
 		$dataPacket     = array(
 			'content' => $discordGroupID,
@@ -122,8 +122,8 @@
 		processNotification($dataPacket);
 	});
 	add_hook('FraudOrder', 1, function($vars)	{
-		$whmcsAdminURL  = ""; // Your WHMCS Admin URL.
-		$companyName    = ""; // Your Company Name.
+		$whmcsAdminURL  = "https://client.omghosting.net/dostafflogin/"; // Your WHMCS Admin URL.
+		$companyName    = "OMG Hosting"; // Your Company Name.
 		$discordGroupID = ""; // Discord Group ID Config Option.
 		$dataPacket     = array(
 			'content' => $discordGroupID,
@@ -143,8 +143,8 @@
 		processNotification($dataPacket);
 	});
 	add_hook('NetworkIssueAdd', 1, function($vars)	{
-		$whmcsAdminURL  = ""; // Your WHMCS Admin URL.
-		$companyName    = ""; // Your Company Name.
+		$whmcsAdminURL  = "https://client.omghosting.net/dostafflogin/"; // Your WHMCS Admin URL.
+		$companyName    = "OMG Hosting"; // Your Company Name.
 		$discordGroupID = ""; // Discord Group ID Config Option.
 		$dataPacket     = array(
 			'content' => $discordGroupID,
@@ -196,8 +196,8 @@
 		processNotification($dataPacket);
 	});
 	add_hook('PendingOrder', 1, function($vars)	{
-		$whmcsAdminURL  = ""; // Your WHMCS Admin URL.
-		$companyName    = ""; // Your Company Name.
+		$whmcsAdminURL  = "https://client.omghosting.net/dostafflogin/"; // Your WHMCS Admin URL.
+		$companyName    = "OMG Hosting"; // Your Company Name.
 		$discordGroupID = ""; // Discord Group ID Config Option.
 		$dataPacket     = array(
 			'content' => $discordGroupID,
@@ -217,8 +217,8 @@
 		processNotification($dataPacket);
 	});
 	add_hook('TicketOpen', 1, function($vars)	{
-		$whmcsAdminURL  = ""; // Your WHMCS Admin URL.
-		$companyName    = ""; // Your Company Name.
+		$whmcsAdminURL  = "https://client.omghosting.net/dostafflogin/"; // Your WHMCS Admin URL.
+		$companyName    = "OMG Hosting"; // Your Company Name.
 		$discordGroupID = ""; // Discord Group ID Config Option.
 		$dataPacket     = array(
 			'content' => $discordGroupID,
@@ -256,8 +256,8 @@
 		processNotification($dataPacket);
 	});
 	add_hook('TicketUserReply', 1, function($vars)	{
-		$whmcsAdminURL  = ""; // Your WHMCS Admin URL.
-		$companyName    = ""; // Your Company Name.
+		$whmcsAdminURL  = "https://client.omghosting.net/dostafflogin/"; // Your WHMCS Admin URL.
+		$companyName    = "OMG Hosting"; // Your Company Name.
 		$discordGroupID = ""; // Discord Group ID Config Option.
 		$dataPacket     = array(
 			'content' => $discordGroupID,
@@ -297,7 +297,7 @@
 	function processNotification($dataPacket, $discordWebHookURL)	{
 		$dataString        = json_encode($dataPacket);
 		$curl              = curl_init();
-		$discordWebHookURL = ""; // Your Discord WebHook URL
+		$discordWebHookURL = "https://discordapp.com/api/webhooks/366301175626203138/diMdABjKkgPB38MRaDQmbPus5tliSMVZ3ydX-55SbHs5XFylJHLoUjp3nEyNZMSYeB1r/github"; // Your Discord WebHook URL
 		curl_setopt($curl, CURLOPT_URL, $discordWebHookURL);
 		curl_setopt($curl, CURLOPT_POST, 1);
 		curl_setopt($curl, CURLOPT_HTTPHEADER, array(
